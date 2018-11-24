@@ -78,6 +78,7 @@
 
         function speakWordAtRandomTime() {
           const msg = new SpeechSynthesisUtterance(shuffledWords[i]);
+          msg.lang = 'de';
           window.speechSynthesis.speak(msg);
 
           if (i < shuffledWords.length) {
