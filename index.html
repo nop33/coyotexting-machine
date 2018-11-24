@@ -103,6 +103,7 @@
         function speakWordAtRandomTime() {
           const msg = new SpeechSynthesisUtterance(shuffledWords[i]);
           msg.lang = 'de';
+          msg.rate = 0.8;
           window.speechSynthesis.speak(msg);
 
           if (i < shuffledWords.length) {
