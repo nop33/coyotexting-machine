@@ -6,63 +6,87 @@
     <title>Text to voice shuffler</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style media="screen">
+      html {
+        height: 100%;
+      }
+
+      body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    </style>
   </head>
   <body>
-    <section class="section">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-10">
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">Text</label>
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-10">
+              <div class="title has-text-centered">
+                <h1>Coyotte Texting Machine</h1>
               </div>
-              <div class="field-body">
-                <div class="field">
-                  <p class="control is-expanded">
-                    <textarea class="textarea" placeholder="Put your text here"></textarea>
-                  </p>
+              <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                  <label class="label">Text</label>
+                </div>
+                <div class="field-body">
+                  <div class="field">
+                    <p class="control is-expanded">
+                      <textarea class="textarea" placeholder="Put your text here"></textarea>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label is-normal">
-                <label class="label">Time between words</label>
-              </div>
-              <div class="field-body">
-                <div class="field">
-                  <p class="control is-expanded has-icons-left">
-                    <input class="input" type="number" id="min" min="0" placeholder="Minimum seconds">
-                    <span class="icon is-small is-left">
-                      <i class="fas fa-clock"></i>
-                    </span>
-                  </p>
+              <div class="field is-horizontal">
+                <div class="field-label is-normal">
+                  <label class="label">Time between words</label>
                 </div>
-                <div class="field">
-                  <p class="control is-expanded has-icons-left">
-                    <input class="input" type="number" id="max" min="0" placeholder="Maximum seconds">
-                    <span class="icon is-small is-left">
-                      <i class="fas fa-clock"></i>
-                    </span>
-                  </p>
+                <div class="field-body">
+                  <div class="field">
+                    <p class="control is-expanded has-icons-left">
+                      <input class="input" type="number" id="min" min="0" placeholder="Minimum seconds">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-clock"></i>
+                      </span>
+                    </p>
+                  </div>
+                  <div class="field">
+                    <p class="control is-expanded has-icons-left">
+                      <input class="input" type="number" id="max" min="0" placeholder="Maximum seconds">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-clock"></i>
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="field is-horizontal">
-              <div class="field-label"></div>
-              <div class="field-body">
-                <div class="field">
-                  <div class="control">
-                    <button class="button is-primary">
-                      Shuffle!
-                    </button>
+              <div class="field is-horizontal">
+                <div class="field-label"></div>
+                <div class="field-body">
+                  <div class="field">
+                    <div class="control">
+                      <button class="button is-primary">
+                        Shuffle!
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          Made with <i class="fas fa-heart has-text-danger"></i> by <a href="https://www.linkedin.com/in/iliastrichopoulos/">Ilias</a>
+        </p>
       </div>
-    </section>
+    </footer>
 
     <script>
       const button = document.querySelector('button');
